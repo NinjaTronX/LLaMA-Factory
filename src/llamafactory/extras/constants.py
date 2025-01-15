@@ -503,6 +503,9 @@ register_model_group(
         "EXAONE-3.0-7.8B-Instruct": {
             DownloadSource.DEFAULT: "LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
         },
+        "EXAONE-3.5-2.4B-Instruct": {
+            DownloadSource.DEFAULT: "LGAI-EXAONE/EXAONE-3.5-2.4B-Instruct",
+        },
     },
     template="exaone",
 )
