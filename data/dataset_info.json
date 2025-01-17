@@ -3,7 +3,11 @@
     "file_name": "identity.json"
   },
     "selectolaxdataset": {
-    "file_name": "selectolaxdataset.json"
+    "file_name": "selectolaxdataset.json",
+		"columns": {
+			"instruction": "instruction",
+			"response": "response"
+    }
   },
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
