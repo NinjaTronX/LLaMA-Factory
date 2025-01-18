@@ -166,6 +166,7 @@ def convert_sharegpt(
     aligned_messages = []
     broken_data = False
     for turn_idx, message in enumerate(messages):
+        print(message[dataset_attr.role_tag])
         if message[dataset_attr.role_tag] not in accept_tags[turn_idx % 2]:
             logger.warning_rank0(f"Invalid role tag in {messages}.")
             broken_data = True
