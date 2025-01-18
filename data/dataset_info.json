@@ -2,18 +2,18 @@
   "identity": {
     "file_name": "identity.json"
   },
-    "selectolaxdataset": {
-    "file_name": "selectolaxdataset.json",
-		"columns": {
-			"instruction": "instruction",
-			"response": "response"
-    }
-  },
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
   },
   "alpaca_zh_demo": {
     "file_name": "alpaca_zh_demo.json"
+  },
+"selectolaxdataset": {
+    "file_name": "selectolaxdataset.json",
+    "formatting": "sharegpt",
+    "columns": { 
+      "messages": "conversations" 
+    }
   },
   "glaive_toolcall_en_demo": {
     "file_name": "glaive_toolcall_en_demo.json",
