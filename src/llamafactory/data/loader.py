@@ -142,7 +142,8 @@ def _load_single_dataset(
 
     if dataset_attr.num_samples is not None and not data_args.streaming:
         target_num = dataset_attr.num_samples
-        print(f"Target Number: {target_num}")        indexes = np.random.permutation(len(dataset))[:target_num]  # all samples should be included
+        print(f"Target Number: {target_num}")        
+        indexes = np.random.permutation(len(dataset))[:target_num]  # all samples should be included
         target_num -= len(indexes)
         if target_num > 0:
             expand_indexes = np.random.choice(len(dataset), target_num)
