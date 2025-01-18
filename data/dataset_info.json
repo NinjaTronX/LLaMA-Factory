@@ -15,6 +15,13 @@
       "messages": "conversations" 
     }
   },
+  "selectolaxdatasettest": {
+    "file_name": "selectolaxdatasettest.json",
+    "formatting": "sharegpt",
+    "columns": { 
+      "messages": "conversations" 
+    }
+  },
   "glaive_toolcall_en_demo": {
     "file_name": "glaive_toolcall_en_demo.json",
     "formatting": "sharegpt",
