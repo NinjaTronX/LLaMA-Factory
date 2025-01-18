@@ -50,19 +50,26 @@ def _load_single_dataset(
     r"""
     Loads a single dataset and aligns it to the standard format.
     """
+    print(f"DatasetAttr: {dataset_attr}")
+    print(f"ModelArguments: {model_args}")
+    print(f"DataArguments: {data_args}")
+    print(f"TrainingArguments: {training_args}")
     logger.info_rank0(f"Loading dataset {dataset_attr}...")
     data_path, data_name, data_dir, data_files = None, None, None, None
     if dataset_attr.load_from in ["hf_hub", "ms_hub", "om_hub"]:
+        print("load from hf_hub OR ms_hub OR om_hub")
         data_path = dataset_attr.dataset_name
         data_name = dataset_attr.subset
         data_dir = dataset_attr.folder
 
     elif dataset_attr.load_from == "script":
+        print("load from script")
         data_path = os.path.join(data_args.dataset_dir, dataset_attr.dataset_name)
         data_name = dataset_attr.subset
         data_dir = dataset_attr.folder
 
     elif dataset_attr.load_from == "file":
+        print("load from file")
         data_files = []
         local_path = os.path.join(data_args.dataset_dir, dataset_attr.dataset_name)
         if os.path.isdir(local_path):  # is directory
@@ -118,6 +125,7 @@ def _load_single_dataset(
             streaming=data_args.streaming,
         )
     else:
+        print("line 128 load_dataset")
         dataset = load_dataset(
             path=data_path,
             name=data_name,
@@ -130,10 +138,11 @@ def _load_single_dataset(
             num_proc=data_args.preprocessing_num_workers,
             trust_remote_code=model_args.trust_remote_code,
         )
+        print(f"Dataset: {dataset}")
 
     if dataset_attr.num_samples is not None and not data_args.streaming:
         target_num = dataset_attr.num_samples
-        indexes = np.random.permutation(len(dataset))[:target_num]  # all samples should be included
+        print(f"Target Number: {target_num}")        indexes = np.random.permutation(len(dataset))[:target_num]  # all samples should be included
         target_num -= len(indexes)
         if target_num > 0:
             expand_indexes = np.random.choice(len(dataset), target_num)
