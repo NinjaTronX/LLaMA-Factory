@@ -8,7 +8,7 @@
   "alpaca_zh_demo": {
     "file_name": "alpaca_zh_demo.json"
   },
-"selectolaxdataset": {
+ "selectolaxdataset": {
     "file_name": "selectolaxdataset.json",
     "formatting": "sharegpt",
     "columns": { 
