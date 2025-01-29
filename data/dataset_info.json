@@ -17,7 +17,7 @@
     }
   },
     "selectolaxdatasettest2": {
-    "file_name": "selectolaxdataset.json",
+    "file_name": "selectolaxdatasettest2.json",
     "formatting": "sharegpt",
     "columns": { 
       "messages": "conversations",
