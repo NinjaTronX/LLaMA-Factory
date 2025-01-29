@@ -20,7 +20,7 @@ train.compute_type: bf16
 train.create_new_adapter: false
 train.cutoff_len: 2048
 train.dataset:
-- selectolaxdataset
+- selectolaxdatasettest2
 train.dataset_dir: data
 train.ds_offload: false
 train.ds_stage: none
@@ -46,7 +46,7 @@ train.max_grad_norm: '1.0'
 train.max_samples: '100000'
 train.neat_packing: false
 train.neftune_alpha: 0
-train.num_train_epochs: '3.0'
+train.num_train_epochs: '5.0'
 train.packing: false
 train.ppo_score_norm: false
 train.ppo_whiten_rewards: false
