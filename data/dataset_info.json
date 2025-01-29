@@ -16,6 +16,14 @@
       "tools": "tools"
     }
   },
+    "selectolaxdatasettest2": {
+    "file_name": "selectolaxdataset.json",
+    "formatting": "sharegpt",
+    "columns": { 
+      "messages": "conversations",
+      "tools": "tools"
+    }
+  },
   "selectolaxdatasettest": {
     "file_name": "selectolaxdatasettest.json",
     "formatting": "sharegpt",
